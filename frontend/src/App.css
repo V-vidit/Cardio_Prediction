@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0f0b1f;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* Glass morphism effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.36);
+}
+
+/* New risk colors with glow effects */
+.risk-low {
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.risk-moderate {
+  color: #ffaa00;
+  text-shadow: 0 0 10px rgba(255, 170, 0, 0.3);
+}
+
+.risk-high {
+  color: #ff3366;
+  text-shadow: 0 0 10px rgba(255, 51, 102, 0.3);
+}
+
+.risk-very-high {
+  color: #ff0066;
+  text-shadow: 0 0 15px rgba(255, 0, 102, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6d28d9, #4c1d95);
+  border-radius: 4px;
+}
+
+/* Custom MUI overrides */
+.MuiPaper-root {
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiButton-contained {
+  border-radius: 12px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  background: linear-gradient(135deg, #6d28d9, #4c1d95) !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiButton-contained:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(109, 40, 217, 0.4) !important;
+}
+
+.MuiTextField-root .MuiOutlinedInput-root {
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.MuiSlider-root {
+  color: #8b5cf6 !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked {
+  color: #00ff88 !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: rgba(0, 255, 136, 0.3) !important;
+}
+
+/* Neon borders for alerts */
+.MuiAlert-root {
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-left: 4px solid;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #8b5cf6, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pulse animation for important elements */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
