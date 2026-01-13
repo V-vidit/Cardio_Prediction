@@ -17,7 +17,6 @@ venv.bak/
 backend/.venv/
 
 # Python artifacts
-*.pkl
 *.joblib
 
 # Jupyter
