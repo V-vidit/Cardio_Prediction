@@ -30,13 +30,13 @@ function App() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
+  const url=process.env.api_url
   const handlePrediction = async (formData) => {
     setLoading(true);
     setError(null);
     
     try {
-      const response = await fetch('/predict', {
+      const response = await fetch(`${url}/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
