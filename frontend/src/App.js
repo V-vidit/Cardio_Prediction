@@ -30,7 +30,7 @@ function App() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const url=process.env.api_url
+  const url=process.env.REACT_APP_API_URL
   const handlePrediction = async (formData) => {
     setLoading(true);
     setError(null);
